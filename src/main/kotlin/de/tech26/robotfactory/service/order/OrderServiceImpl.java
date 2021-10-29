@@ -62,7 +62,7 @@ public class OrderServiceImpl implements OrderService {
             throw new StockNotExistException(String.format(Constants.STOCK_NOT_FOUND, code));
         }
 
-        //validate if robot assembly should contains one, and only one part
+        //validate if robot assembly should contain one, and only one part
         if (visitedGroup.contains(repoStock.getGroup())) {
             throw new OrderNotPocessableException(String.format(Constants.COMPONENT_NOT_VALID, code, repoStock.getGroup()));
         }
