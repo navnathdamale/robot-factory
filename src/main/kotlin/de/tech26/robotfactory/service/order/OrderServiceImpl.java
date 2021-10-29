@@ -3,10 +3,7 @@ package de.tech26.robotfactory.service.order;
 import de.tech26.robotfactory.dto.OrderRequestDTO;
 import de.tech26.robotfactory.dto.OrderResponseDTO;
 import de.tech26.robotfactory.entity.Stock;
-import de.tech26.robotfactory.exception.OrderNotValidException;
-import de.tech26.robotfactory.exception.RobotFactoryException;
-import de.tech26.robotfactory.exception.StockNotAvailableException;
-import de.tech26.robotfactory.exception.StockNotExistException;
+import de.tech26.robotfactory.exception.*;
 import de.tech26.robotfactory.service.stock.StockService;
 import de.tech26.robotfactory.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,7 +64,7 @@ public class OrderServiceImpl implements OrderService {
 
         //validate if robot assembly should contains one, and only one part
         if (visitedGroup.contains(repoStock.getGroup())) {
-            throw new OrderNotValidException(Constants.ORDER_NOT_VALID);
+            throw new OrderNotPocessableException(String.format(Constants.COMPONENT_NOT_VALID, code, repoStock.getGroup()));
         }
 
         //validate if enough stock available

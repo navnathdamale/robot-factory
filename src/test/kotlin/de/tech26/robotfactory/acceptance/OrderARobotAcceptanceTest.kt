@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus
 class OrderARobotAcceptanceTest {
 
     @LocalServerPort
-    val springBootPort: Int = 0
+    val springBootPort: Int = 8080
 
     @Test
     fun `should order a robot`() {

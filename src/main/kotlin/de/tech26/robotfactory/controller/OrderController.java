@@ -30,6 +30,6 @@ public class OrderController {
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<OrderResponseDTO> createOrder(@RequestBody OrderRequestDTO order) throws RobotFactoryException {
         LOG.info("createOrder {}", order);
-        return new ResponseEntity<>(orderService.handleRobotCreationOrder(order), HttpStatus.OK);
+        return new ResponseEntity<>(orderService.handleRobotCreationOrder(order), HttpStatus.CREATED);
     }
 }

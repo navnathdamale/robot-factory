@@ -1,8 +1,11 @@
 package de.tech26.robotfactory.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class OrderResponseDTO {
+    @JsonProperty("order_id")
     private String orderId;
     private double total;
 
