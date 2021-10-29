@@ -1,0 +1,1 @@
+/Users/navnath.damale/Downloads/robot-factory/build/classes/java/main/de/tech26/robotfactory/RobotFactoryApplication.class:/Users/navnath.damale/Downloads/robot-factory/build/classes/java/main/de/tech26/robotfactory/controller/RobotFactoryController.class
